@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Weather App</title>
+</head>
+<body>
+    <div id="main-container">
+        <h1> Today's Weather </h1>
+        <!-- Input data -->
+        <div id="inputs"> 
+            <div class="input-text">           
+                <input type="text" id="zip" class="input-box" placeholder="Enter Zip code here">            
+                <label for="zip">Zip code</label>
+               
+                <input type="text" id="country" class="input-box" placeholder="Enter the Country">
+                <label for="country">Country</label> 
+            </div>     
+            <div class="input-textarea">
+                <textarea id="feelings" placeholder="What are your feeling today?"></textarea>
+            </div>
+            <div class="input-button">
+                <div id="generate">Get Weather</div>
+            </div>            
+        </div>
+        <!-- Insert data typed by user -->
+        <div id="container-weather">
+            <div id="title-weather">
+                <div id="weather-city">Country, Zip code</div>
+                <div id="date-time">Date</div>
+            </div>
+            <!-- <div id="alerts-weather">No Alerts in effect</div> -->
+            <!-- Show the weather based on user Input -->
+            <div id="current-weather">
+                <div id="temperature" class="curr-temp">Temperature</div>                
+                <div id="condition" class="curr-temp">Condition</div>
+                <div id="max-min" class="curr-temp">Min - Max</div>
+                <div id="wind" class="curr-temp">Wind</div>
+                <div id="visibility" class="curr-temp">visibility</div>
+            </div> 
+        </div>
+        <!-- Data inputs -->
+        <div id="entryHolder">
+            <h4>Current search</h4>
+            <div id="date"></div>
+            <div id="temp"></div>
+            <div id="content"></div>
+        </div>
+        <div id="historic">
+            <div id="historic-data">
+                <h5>Last researches</h5>               
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div id="author">Developed by Allan Viveiros</div>
+    </footer>
+
+    <script type="text/javascript" src="js/app.js"></script>    
+</body>
+</html>

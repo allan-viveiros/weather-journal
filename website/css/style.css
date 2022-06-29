@@ -1,0 +1,345 @@
+body {
+    height: 100vh;
+    width: 100%; 
+    margin: 0;
+    padding: 0px;
+    background:        
+      radial-gradient(ellipse at 20% 20%, #795d64d3 0%, transparent 70%),
+      radial-gradient(ellipse at 60% 20%,  #677C8E 0%, transparent 70%),
+      radial-gradient(ellipse at 100% 20%, #296588 0%, transparent 70%),
+      radial-gradient(ellipse at 100% 100%, #5C3D4F 0%, transparent 70%),
+      radial-gradient(ellipse at 20% 100%, #012249 0%, transparent 70%);
+    background-blend-mode:screen;   
+    font-size: 20px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    /* border: 1px solid yellow; */   
+}
+
+#main-container{
+    margin: auto;
+    width: 100%;
+    padding: 10px;
+    /* border: 1px solid red; */
+    text-align: center;
+}
+
+/** Display grid to inputs */
+#inputs{
+    display: grid;
+    width: 45%;
+    margin: auto;
+    padding: 5px;
+    /*grid-template-columns: 40% 40% 20%;*/
+    text-align: left;
+    align-items: center;
+    grid-template-areas: 
+    "input-text input-textarea input-button";
+}
+.input-text{
+    grid-area: input-text;   
+    width: fit-content;
+    margin-right: 5px;
+} 
+.input-textarea{
+    grid-area: input-textarea;
+    width: fit-content;
+    margin-right: 5px;
+} 
+.input-button{
+    grid-area: input-button;
+    display: flex;
+    width: fit-content;
+}
+.input-box{
+    margin-top: 10px;
+}
+
+h1{
+    border: none;
+    padding: 0px;
+}
+
+
+input{
+    background: none;
+    font-size: 18px;
+    padding: 0px;
+    display: block;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.623);
+    color: rgb(47, 79, 79);
+    line-height: 1.5;
+}
+
+input:focus, input:active {   
+    outline: none;
+    padding: 0px; 
+    background: none;
+    font-size: 18px;
+    display: block; 
+    border-bottom: 1px solid rgba(0, 0, 0, 0.623);
+    color: rgb(47, 79, 79); 
+}
+
+::placeholder{
+    color: rgba(47, 79, 79, 0.767);
+}
+
+textarea{
+    height: 150px;
+    width: 250px;
+    padding: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.623);
+    border-radius: 5px;
+    background: none;
+    resize: none;
+}
+
+#generate{   
+    height: fit-content; 
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;    
+    margin-top: auto;
+}
+#generate:hover{
+    border: 1px whitesmoke solid;
+    color: whitesmoke;
+    background: rgba(245, 245, 245, 0.123);
+}
+
+#container-weather{
+    display: grid;
+    width: fit-content;
+    margin: 15px auto 10px auto;
+    border: 1px solid rgba(0, 0, 0, 0.295);
+    grid-template-areas: 
+    "title-weather"
+    "current-weather";
+}
+
+#title-weather{
+    grid-area: title-weather;
+    width: 100%;
+    padding: 5px 0px 5px 0px;    
+    background: rgba(245, 245, 245, 0.116);
+}
+
+#current-weather{
+    grid-area: current-weather;
+    display: grid;
+    width: 100%;
+    /* border: 1px solid white; */   
+    grid-template-areas: 
+    "temperature condition max-min wind visibility";
+}
+
+.curr-temp {
+    border: 1px solid rgba(0, 0, 0, 0.295);
+    padding: 5px;
+    background: rgba(245, 245, 245, 0.116);
+}
+
+#temperature{
+    grid-area: temperature;
+} 
+#condition{
+    grid-area: condition;
+} 
+#max-min{
+    grid-area: max-min;
+} 
+#wind{
+    grid-area: wind;
+} 
+#visibility{
+    grid-area: visibility;
+}
+
+
+#entryHolder{
+    margin: 10px auto 10px auto;    
+    border: 1px solid #01214954;
+    padding: 5px;
+    width: fit-content;
+    height: fit-content;
+}
+
+h4{
+    margin: 0px 0px 5px 0px;
+    border-bottom: 1px solid #012149;
+    padding: 5px 5px 0px 5px;
+}
+
+#historic{
+    margin: 0px;
+    border: none;
+    padding: 0px;    
+}
+
+h5{
+    margin: 0px;
+    border: none;
+    padding: 0px;
+}
+
+#historic-data{
+    margin: auto;
+    border: 1px solid rgba(0, 0, 0, 0.295);
+    max-height: 100px;
+    width: fit-content;
+    overflow: auto;
+}
+
+footer{
+    position:static;
+    left: 0;
+    bottom: 0;
+    height: 30px;
+    width: 100%;
+    padding: 5px 0px 5px 0px;
+    font-size: 12px;
+    text-align: center;
+    color: rgb(63, 63, 63);
+}
+
+@media (max-width: 320px) {
+    body{
+        font-size: 12px;
+    }      
+    #inputs{
+        display: grid;
+        width: 100%;
+        margin: auto;
+        padding: 5px;
+        /*grid-template-columns: 40% 40% 20%;*/
+        text-align: left;
+        align-items: center;
+        grid-template-areas: 
+        "input-text"
+        "input-textarea"
+        "input-button";
+    }  
+
+    .input-textarea{
+        grid-area: input-textarea;
+        width: fit-content;
+        margin: 5px 0px 5px 0px;
+    }
+
+    #container-weather{
+        display: grid;
+        max-width: 280px;
+        margin: 10px 5px 10px 5px;
+        border: 1px solid rgba(0, 0, 0, 0.295);
+        grid-template-areas: 
+        "title-weather"
+        "current-weather";
+    }
+
+    #current-weather{
+        grid-area: current-weather;
+        display: grid;
+        width: 100%;
+        /* border: 1px solid white; */   
+        grid-template-areas: 
+        "temperature" 
+        "condition" 
+        "max-min" 
+        "wind "
+        "visibility";
+    }
+
+    #entryHolder{
+        margin: 10px 5px 10px 5px;    
+        border: 1px solid #01214954;
+        padding: 5px;
+        max-width: 280px;
+        height: fit-content;
+    }
+
+    #historic-data{
+        margin: 10px 5px 10px 5px; 
+        border: 1px solid rgba(0, 0, 0, 0.295);
+        max-height: 100px;
+        max-width: 280px;
+        overflow: auto;
+    }
+
+    footer{
+        color: black;
+    }
+}
+
+
+@media (min-width: 321px) and (max-width: 900px) {
+    body{
+        font-size: 18px;
+    }     
+
+    #inputs{
+        display: grid;
+        width: 100%;
+        margin: auto;
+        padding: 5px;
+        /*grid-template-columns: 40% 40% 20%;*/
+        text-align: left;
+        align-items: center;
+        grid-template-areas: 
+        "input-text"
+        "input-textarea"
+        "input-button";
+    }  
+
+    .input-textarea{
+        grid-area: input-textarea;
+        width: fit-content;
+        margin: 5px 0px 5px 0px;
+    }
+
+    #container-weather{
+        display: grid;
+        max-width: 280px;
+        margin: auto;
+        border: 1px solid rgba(0, 0, 0, 0.295);
+        grid-template-areas: 
+        "title-weather"
+        "current-weather";
+    }
+
+    #current-weather{
+        grid-area: current-weather;
+        display: grid;
+        width: 100%;
+        /* border: 1px solid white; */   
+        grid-template-areas: 
+        "temperature" 
+        "condition" 
+        "max-min" 
+        "wind "
+        "visibility";
+    }
+
+    #entryHolder{
+        margin: 15px auto 15px auto;    
+        border: 1px solid #01214954;
+        padding: 5px;
+        max-width: 280px;
+        height: fit-content;
+    }
+
+    #historic-data{
+        margin: 15px auto 15px auto; 
+        border: 1px solid rgba(0, 0, 0, 0.295);
+        max-height: 100px;
+        max-width: 280px;
+        overflow: auto;
+    }
+
+    footer{
+        color: black;
+    }
+}
