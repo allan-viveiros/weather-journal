@@ -8,7 +8,7 @@ document.getElementById('generate').addEventListener('click', performAction);
 /** Function to get Weather based on user information */
 function performAction(e){
     const zip = document.getElementById('zip').value;
-    const country = document.getElementById('country').value;
+    const country = document.getElementById('countries').value;
     const content = document.getElementById('feelings').value;
     const fullURL = `${baseURL}${zip},${country}&appid=${appKey}`;    
     const dateNow = new Date().toUTCString();
@@ -115,3 +115,4 @@ const updateHist = async () => {
         console.log(error);
     }
 }
+

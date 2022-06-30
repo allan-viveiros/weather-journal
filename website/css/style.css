@@ -40,6 +40,9 @@ body {
     width: fit-content;
     margin-right: 5px;
 } 
+.select-country{
+    width: 200px;
+}
 .input-textarea{
     grid-area: input-textarea;
     width: fit-content;
